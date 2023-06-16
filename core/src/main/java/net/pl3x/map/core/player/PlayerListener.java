@@ -35,10 +35,11 @@ public class PlayerListener {
      * @param player player that joined
      */
     public void onJoin(@NotNull Player player) {
-        if (player.isHidden()) {
+        // Can't show the player if it is never registered
+        /*if (player.isHidden()) {
             player.setHidden(true, false);
         }
-        new PlayerTexture(player).start();
+        new PlayerTexture(player).start();*/
     }
 
     /**

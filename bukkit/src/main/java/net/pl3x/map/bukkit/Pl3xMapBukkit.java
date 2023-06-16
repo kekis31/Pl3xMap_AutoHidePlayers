@@ -115,20 +115,24 @@ public class Pl3xMapBukkit extends JavaPlugin implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onPlayerJoin(@NotNull PlayerJoinEvent event) {
+        /*
         PlayerRegistry registry = Pl3xMap.api().getPlayerRegistry();
         UUID uuid = event.getPlayer().getUniqueId();
         Player bukkitPlayer = registry.getOrDefault(uuid, () -> new BukkitPlayer(event.getPlayer()));
         this.playerListener.onJoin(bukkitPlayer);
+        */
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerQuit(@NotNull PlayerQuitEvent event) {
+        /*
         PlayerRegistry registry = Pl3xMap.api().getPlayerRegistry();
         UUID uuid = event.getPlayer().getUniqueId();
         Player bukkitPlayer = registry.unregister(uuid);
         if (bukkitPlayer != null) {
             this.playerListener.onQuit(bukkitPlayer);
         }
+        */
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
